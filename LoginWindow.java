@@ -1,7 +1,16 @@
 /*
- * Stage: Development-01
- * @author:
- * @author:
+Development-01:
+@author: Güney Berkay Ateş, 120200047
+@author: Müge Güney, 120200058
+https://github.com/gnymug/cmpe331_test
+Development-02:
+PULL REQUEST
+@author: Ahmet Kıvanç Demirkıran, 120200133
+@author: Maram Al-Maohgra, 120200123
+Development-03
+CODE REVİEW
+@author: Nimer Hamou 117202010
+@author: Zafer Sercan Yıldız 119202037
  *
  */
 
@@ -33,7 +42,7 @@ public class LoginWindow extends JFrame implements ActionListener {
 	 * ! YOU CAN ADD MORE ELEMENTS IF IT IS NECESSARY !
 	 */
 	private JButton btn01, btn02;
-	private JLabel lbl01, lbl02;
+	private JLabel lbl01, lbl02, lbl03;
 	private JTextField txt01, txt02;
 
 
@@ -54,6 +63,9 @@ public class LoginWindow extends JFrame implements ActionListener {
 	public void initializeGUI() {
 		lbl01 = new JLabel("User Name: ", SwingConstants.CENTER);
 		lbl02 = new JLabel("Password: ", SwingConstants.CENTER);
+		lbl03 = new JLabel("Welcome to our website",SwingConstants.CENTER );
+		lbl03.setSize(50, 50);
+	
 
 		txt01 = new JTextField("  ");
 		txt02 = new JTextField("  ");
@@ -96,6 +108,8 @@ public class LoginWindow extends JFrame implements ActionListener {
 
 		this.add(btn01);
 		this.add(btn02);
+		
+		
 	}
 
 	 //define abstract method actionPerformed() which will be called on button click   
@@ -138,6 +152,20 @@ public class LoginWindow extends JFrame implements ActionListener {
 	            setVisible(true);  
 	                
 	        }  
+	        
+	        else if(e.getSource()==btn02) {
+
+        JFrame j=new JFrame();
+       j.setSize(800,800); 
+       j.setVisible(true);
+       j.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       j.add(lbl03);
+ 
+
+}
+
+
+	        
 	        else{  
 	            //show error message  
 	            System.out.println("Please enter valid username and password");  
@@ -145,6 +173,8 @@ public class LoginWindow extends JFrame implements ActionListener {
 		// TODO Auto-generated method stub
 
 	}
+	
+	
 	
 
 }
